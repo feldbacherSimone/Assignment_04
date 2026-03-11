@@ -12,6 +12,18 @@
       "upload": true,
       "stopAtEntry": true,
       "preLaunchTask": "${defaultBuildTask}"
+    },
+    {
+      "type": "qnx-gdb",
+      "request": "launch",
+      "name": "build/aarch64le-debug/Assignment_04",
+      "gdb": "gdb",
+      "program": "build/aarch64le-debug/Assignment_04",
+      "remotePath": "Assignment_04",
+      "qnxtarget": "default",
+      "upload": true,
+      "stopAtEntry": true,
+      "preLaunchTask": "${defaultBuildTask}"
     }
   ]
 }

@@ -3,6 +3,38 @@
 	"tasks": [
 		{
 			"type": "shell",
+			"label": "C/C++: qcc build active file",
+			"command": "qcc",
+			"args": [
+				"-Vgcc_nto${config:qnx.arch}",
+				"-g",
+				"-O0",
+				"${file}",
+				"${workspaceFolder}/aes.c",
+				"-lm",
+				"-o",
+				"${workspaceFolder}/build/${config:qnx.arch}-debug/Assignment_04"
+			],
+			"options": {
+				"cwd": "${workspaceFolder}",
+				"env": {
+					"QNX_HOST": "${env:QNX_HOST}",
+					"QNX_TARGET": "${env:QNX_TARGET}",
+					"MAKEFLAGS": "${env:MAKEFLAGS}",
+					"PATH": "${env:PATH}"
+				}
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"detail": "Build active C file with qcc and link libm"
+		},
+		{
+			"type": "shell",
 			"label": "QNX: build debug",
 			"command": "make BUILD_PROFILE=debug PLATFORM=${config:qnx.arch} all",
 			"options": {
