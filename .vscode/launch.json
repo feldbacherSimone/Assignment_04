@@ -8,7 +8,7 @@
       "gdb": "gdb",
       "program": "${command:qnx.autodetectBinary}",
       "remotePath": "Assignment_04",
-      "qnxtarget": "default",
+      "qnxtarget": "qemu-qnx800-x86_64",
       "upload": true,
       "stopAtEntry": true,
       "preLaunchTask": "${defaultBuildTask}"
@@ -20,7 +20,7 @@
       "gdb": "gdb",
       "program": "build/aarch64le-debug/Assignment_04",
       "remotePath": "Assignment_04",
-      "qnxtarget": "default",
+      "qnxtarget": "qemu-qnx800-x86_64",
       "upload": true,
       "stopAtEntry": true,
       "preLaunchTask": "${defaultBuildTask}"
